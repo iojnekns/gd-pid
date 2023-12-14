@@ -36,6 +36,8 @@ namespace godot {
             float get_Kd() const;
             void set_setpoint(float p_setpoint);
             float get_setpoint() const;
+            void set_integral(float p_integral);
+            float get_integral() const;
 
             float integral;
             float prev_error;

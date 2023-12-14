@@ -22,6 +22,10 @@ void PID :: _bind_methods(){
     ClassDB::bind_method(D_METHOD("get_setpoint"), &PID::get_setpoint);
     ClassDB::bind_method(D_METHOD("set_setpoint"), &PID::set_setpoint);
     ClassDB::add_property("PID", PropertyInfo(Variant::FLOAT, "setpoint"), "set_setpoint", "get_setpoint");
+
+    ClassDB::bind_method(D_METHOD("get_integral"), &PID::get_integral);
+    ClassDB::bind_method(D_METHOD("set_integral"), &PID::set_integral);
+    ClassDB::add_property("PID", PropertyInfo(Variant::FLOAT, "integral"), "set_integral", "get_integral");
 }
 
 PID :: PID(){
@@ -84,4 +88,12 @@ void PID::set_setpoint(const float p_setpoint) {
 
 float PID::get_setpoint() const {
 	return setpoint;
+}
+
+void PID::set_integral(const float p_integral) {
+	integral = p_integral;
+}
+
+float PID::get_integral() const {
+	return integral;
 }
