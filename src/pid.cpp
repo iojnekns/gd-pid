@@ -5,6 +5,7 @@ using namespace godot;
 
 void PID :: _bind_methods(){
 	ClassDB::bind_method(D_METHOD("update_PID"), &PID::update_PID);
+    ClassDB::bind_method(D_METHOD("reset"), &PID::reset);
 
     ClassDB::bind_method(D_METHOD("get_Kp"), &PID::get_Kp);
     ClassDB::bind_method(D_METHOD("set_Kp"), &PID::set_Kp);
